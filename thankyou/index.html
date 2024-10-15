@@ -33,7 +33,49 @@
         background-color: rgba(255, 255, 255, 0.4);
         padding: 1.5rem;
       }
+      #my-gallery a {
+        float: left;
+        overflow: hidden;
+        width: 50vw;
+        max-height: 100vh;
+        &.h {
+          width: 100vh;
+          height: 66vh;
+        }
+      }
+      #my-gallery {
+        .header-image {
+          width: 100vw;
+          clear: both;
+          img {
+            width:100%;
+          }
+        }
+      }
     </style>
+
+    <!-- Tailwind -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <script src="glide.js"></script>
@@ -61,409 +103,254 @@
         </div>
       </section>
     </div>
-    <section>
+    <section id="image-gallery">
       <div id="my-gallery">
+        <!-- white 1 -->
+
         <a
+          class="img-2317 header-image"
           href="images/4Q4A2317.jpg"
           data-pswp-width="1237"
           data-pswp-height="875"
         >
-          <img
-            src="images/4Q4A2317.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2317.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2328.jpg"
           data-pswp-width="799"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2328.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2328.jpg" alt="Image 1" />
         </a>
-        <a
-          href="images/4Q4A2332.jpg"
-          data-pswp-width="1236"
-          data-pswp-height="824"
-        >
-          <img
-            src="images/4Q4A2332.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
-        </a>
+        <div class="flex gap-0">
+          <a
+            href="images/4Q4A2332.jpg"
+            data-pswp-width="1236"
+            data-pswp-height="824"
+          >
+            <img src="images/4Q4A2332.jpg" alt="Image 1" />
+          </a>
+          <a
+            href="images/4Q4A2752.jpg"
+            data-pswp-width="1236"
+            data-pswp-height="824"
+          >
+            <img src="images/4Q4A2752.jpg" alt="Image 1" />
+          </a>
+        </div>
         <a
           href="images/4Q4A2356.jpg"
           data-pswp-width="825"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2356.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2356.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2395.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2395.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2395.jpg" alt="Image 1" />
         </a>
+        <a
+          href="images/4Q4A2719.jpg"
+          data-pswp-width="825"
+          data-pswp-height="1236"
+        >
+          <img src="images/4Q4A2719.jpg" alt="Image 1" />
+        </a>
+
+        <a
+          href="images/4Q4A2760.jpg"
+          data-pswp-width="824"
+          data-pswp-height="1236"
+        >
+          <img src="images/4Q4A2760.jpg" alt="Image 1" />
+        </a>
+        <!-- white 2 -->
         <a
           href="images/4Q4A2447.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2447.jpg"
-            
-            width="50%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2447.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2452.jpg"
           data-pswp-width="825"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2452.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2452.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2455.jpg"
           data-pswp-width="825"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2455.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2455.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2457.jpg"
           data-pswp-width="825"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2457.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2457.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2459.jpg"
           data-pswp-width="824"
           data-pswp-height="1231"
         >
-          <img
-            src="images/4Q4A2459.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2459.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2460.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2460.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2460.jpg" alt="Image 1" />
         </a>
+        <!-- white 3 -->
+
         <a
           href="images/4Q4A2519.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2519.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          /> </a
+          <img src="images/4Q4A2519.jpg" alt="Image 1" /> </a
         ><a
           href="images/4Q4A2560.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2560.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2560.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2570.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2570.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2570.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2574.jpg"
           data-pswp-width="909"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2574.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2574.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2592.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2592.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2592.jpg" alt="Image 1" />
         </a>
-        <a
-          href="images/4Q4A2719.jpg"
-          data-pswp-height="825"
-          data-pswp-width="1236"
-        >
-          <img
-            src="images/4Q4A2719.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
-        </a>
-        <a
-          href="images/4Q4A2752.jpg"
-          data-pswp-height="824"
-          data-pswp-width="1236"
-        >
-          <img
-            src="images/4Q4A2752.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
-        </a>
-        <a
-          href="images/4Q4A2760.jpg"
-          data-pswp-width="824"
-          data-pswp-height="1236"
-        >
-          <img
-            src="images/4Q4A2760.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
-        </a>
+
         <a
           href="images/4Q4A2797.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2797.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2797.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2798.jpg"
           data-pswp-width="835"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2798.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2798.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2801.jpg"
-          data-pswp-width="824"
-          data-pswp-height="1236"
+          data-pswp-height="824"
+          data-pswp-width="1236"
         >
-          <img
-            src="images/4Q4A2801.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2801.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2836.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2836.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2836.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2838.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2838.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2838.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2848.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2848.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2848.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2850.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2850.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2850.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2891.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2891.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2891.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2898.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2898.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2898.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2968.jpg"
           data-pswp-width="832"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2968.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2968.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2975.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2975.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2975.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2978.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2978.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2978.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A2985.jpg"
           data-pswp-width="832"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A2985.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A2985.jpg" alt="Image 1" />
         </a>
         <a
           href="images/4Q4A3026.jpg"
           data-pswp-width="824"
           data-pswp-height="1236"
         >
-          <img
-            src="images/4Q4A3026.jpg"
-            height="50%"
-            width="10%"
-            alt="Image 1"
-          />
+          <img src="images/4Q4A3026.jpg" alt="Image 1" />
         </a>
 
         <!-- More images... -->
       </div>
     </section>
 
-    <section id="">
+    <!-- <section id="slideshows">
       <div id="slideshow1" class="glide1">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -525,54 +412,7 @@
       <li class="glide__slide">会明，信雄佳，哲良，鸿文武</li>
       <li class="glide__slide">振哲，天鸿，孟才，明泉</li>
       <li class="glide__slide">Victor, Lily</li>
-    </ul>
-    <!-- Root element of PhotoSwipe -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <!-- Background of PhotoSwipe. 
-       It's a separate element, as animating opacity is faster than rgba(). -->
-      <div class="pswp__bg"></div>
-
-      <!-- Slides wrapper with overflow:hidden. -->
-      <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. -->
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be removed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button
-              class="pswp__button pswp__button--close"
-              title="Close (Esc)"
-            ></button>
-            <button
-              class="pswp__button pswp__button--share"
-              title="Share"
-            ></button>
-            <button
-              class="pswp__button pswp__button--fs"
-              title="Toggle fullscreen"
-            ></button>
-            <button
-              class="pswp__button pswp__button--zoom"
-              title="Zoom in/out"
-            ></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Additional elements like arrow navigation, captions, etc. -->
-        </div>
-      </div>
-    </div>
+    </ul> -->
   </body>
   <script>
     new Glide(".glide1", {
