@@ -8,3 +8,10 @@
 *.mp4
 *.avi
 *.mov
+*.m4v
+
+*.zip
+
+.gitignore
+
+*.DS_Store
