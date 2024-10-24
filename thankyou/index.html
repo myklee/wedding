@@ -41,14 +41,6 @@
         align-items: center;
         justify-content: center;
       }
-      #my-gallery a {
-        /* width: 200px;
-        height: 200px; */
-        &.h {
-          /* width: 100vh; */
-          /* height: 33vw; */
-        }
-      }
 
       #my-gallery {
         .header-image {
@@ -66,9 +58,8 @@
         display: flex;
         align-items: end;
         justify-content: center;
-        /* flex-wrap: wrap; */
-        width:100%;
-        overflow: scroll;
+        width: 100%;
+        overflow-x: scroll;
         gap: 1rem;
         padding: 2rem;
         backdrop-filter: blur(10px);
@@ -76,8 +67,8 @@
         bottom: 0;
         a {
           overflow: hidden;
-          width: 150px;
-          height: 150px;
+          min-width: 150px;
+          min-height: 150px;
           justify-items: center;
           &.h {
             width: 225px;
