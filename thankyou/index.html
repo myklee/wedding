@@ -18,14 +18,47 @@
       }
       .thumbs-nav {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         gap: 1rem;
+        margin-top: 2rem;
       }
       .thumb-nav-item {
         display: block;
-        width: 160px;
-        height: 90px;
+        width: 25vw;
+        height: 25vw;
+        max-width: 125px;
+        max-height: 125px;
         background-color: white;
+        border-radius: 50%;
+        transition: 100ms all ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
+      #white-1-nav {
+        background: no-repeat center/cover url("images/4Q4A2317.jpg");
+      }
+      #white-2-nav {
+        background: no-repeat center/cover url("images/4Q4A2447.jpg");
+      }
+      #white-3-nav {
+        background: no-repeat center/cover url("images/4Q4A2574.jpg");
+      }
+      #red-1-nav {
+        background: no-repeat center/cover url("images/4Q4A2797.jpg");
+      }
+      #red-2-nav {
+        background: no-repeat top / cover url("images/4Q4A2985.jpg");
+      }
+      #day-family-nav {
+        background: no-repeat center/cover url("images/day_family/FANSON-76.jpg");
+      }
+      #special-thanks {
+        background: no-repeat center/cover url("images/4Q4A2317.jpg");
+      }
+
       #landing {
         background: url("images/bg1.jpg") no-repeat center/cover;
         width: 100vw;
@@ -41,9 +74,11 @@
         }
       }
       #landing-content {
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(123, 0, 0, 0.8);
         padding: 1.5rem;
         backdrop-filter: blur(4px);
+        color: white;
+        border-radius: 10px;
       }
       #my-gallery {
         display: flex;
@@ -62,7 +97,7 @@
       .section-bg {
         width: 100vw;
         height: 100vh;
-        max-width:1280px;
+        max-width: 1280px;
         position: relative;
         background-color: #6a0000;
         margin: 5vh 0;
@@ -70,12 +105,12 @@
       .thumbs {
         display: flex;
         align-items: end;
-        justify-content: center;
+        justify-content: start;
         width: 100%;
         overflow-x: scroll;
         gap: 1rem;
         padding: 2rem;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(4px);
         position: absolute;
         bottom: 0;
         a {
@@ -112,23 +147,23 @@
         background: no-repeat center/cover url("images/4Q4A2797.jpg");
       }
       .red-2 {
-        background: no-repeat top /cover url("images/4Q4A2985.jpg");
+        background: no-repeat top / cover url("images/4Q4A2985.jpg");
         .thumbs {
-          left:0;
+          left: 0;
           flex-direction: column;
           align-items: center;
           justify-content: start;
           overflow-y: scroll;
           height: 100%;
-          width:200px;
+          width: 200px;
           a {
-            width:100px;
+            width: 100px;
           }
         }
       }
       .day-family {
-        background: no-repeat center/cover url("images/day_family/FANSON-76.jpg");
-
+        background: no-repeat center/cover
+          url("images/day_family/FANSON-76.jpg");
       }
       #back-to-top {
         position: fixed;
@@ -139,6 +174,12 @@
         background-color: blue;
         padding: 1rem;
         color: white;
+      }
+      .special-thanks {
+        height: auto;
+        font-size: 2rem;
+        color: white;
+        padding: 3rem;
       }
     </style>
 
@@ -191,20 +232,12 @@
           </p>
         </div>
         <div class="thumbs-nav">
-          <a id="white-1-nav" class="thumb-nav-item" href="#white-1"
-            >Gallery 1</a
-          >
-          <a id="white-2-nav" class="thumb-nav-item" href="#white-2"
-            >Gallery 2</a
-          >
-          <a id="white-3-nav" class="thumb-nav-item" href="#white-3"
-            >Gallery 3</a
-          >
-          <a id="red-1-nav" class="thumb-nav-item" href="#red-1">Gallery 4</a>
-          <a id="red-2-nav" class="thumb-nav-item" href="#red-2">Gallery 5</a>
-          <a id="day-family-nav" class="thumb-nav-item" href="#day-family"
-            >Gallery 5</a
-          >
+          <a id="white-1-nav" class="thumb-nav-item" href="#white-1"></a>
+          <a id="white-2-nav" class="thumb-nav-item" href="#white-2"></a>
+          <a id="white-3-nav" class="thumb-nav-item" href="#white-3"></a>
+          <a id="red-1-nav" class="thumb-nav-item" href="#red-1"></a>
+          <a id="red-2-nav" class="thumb-nav-item" href="#red-2"></a>
+          <a id="day-family-nav" class="thumb-nav-item" href="#day-family"></a>
         </div>
       </section>
     </div>
@@ -503,7 +536,8 @@
          
         
         -->
-        <div class="section-bg">
+        <div class="section-bg special-thanks">
+          <h2>Special thank you to the following for the wonderful gifts!</h2>
           <ul>
             <li class="glide__slide">邱嘉傻</li>
             <li class="glide__slide">陈柏落</li>
@@ -520,6 +554,9 @@
             <li class="glide__slide">会明，信雄佳，哲良，鸿文武</li>
             <li class="glide__slide">振哲，天鸿，孟才，明泉</li>
             <li class="glide__slide">Victor, Lily</li>
+            <li class="glide__slide">Ilyn</li>
+            <li class="glide__slide">More</li>
+            <li class="glide__slide">More</li>
           </ul>
         </div>
         <!--
