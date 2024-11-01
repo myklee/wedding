@@ -16,6 +16,16 @@
         height: 100vh;
         width: 100vw;
       }
+      .thumbs-nav {
+        display: flex;
+        gap: 1rem;
+      }
+      .thumb-nav-item {
+        display: block;
+        width: 160px;
+        height: 90px;
+        background-color: white;
+      }
       #landing {
         background: url("images/bg1.jpg") no-repeat center/cover;
         width: 100vw;
@@ -52,7 +62,10 @@
       .section-bg {
         width: 100vw;
         height: 100vh;
+        max-width:1280px;
         position: relative;
+        background-color: #6a0000;
+        margin: 5vh 0;
       }
       .thumbs {
         display: flex;
@@ -74,6 +87,17 @@
             width: 225px;
           }
         }
+        &.day-family-thumbs {
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          top: 0;
+          a {
+            width: 150px;
+            height: 100px !important;
+            min-height: 100px;
+          }
+        }
       }
       .white-1 {
         background: no-repeat center/cover url("images/4Q4A2317.jpg");
@@ -82,13 +106,39 @@
         background: no-repeat center/cover url("images/4Q4A2447.jpg");
       }
       .white-3 {
-        background: no-repeat center/cover url("images/4Q4A2519.jpg");
+        background: no-repeat center/cover url("images/4Q4A2574.jpg");
       }
       .red-1 {
         background: no-repeat center/cover url("images/4Q4A2797.jpg");
       }
       .red-2 {
-        background: no-repeat center/cover url("images/4Q4A2891.jpg");
+        background: no-repeat top /cover url("images/4Q4A2985.jpg");
+        .thumbs {
+          left:0;
+          flex-direction: column;
+          align-items: center;
+          justify-content: start;
+          overflow-y: scroll;
+          height: 100%;
+          width:200px;
+          a {
+            width:100px;
+          }
+        }
+      }
+      .day-family {
+        background: no-repeat center/cover url("images/day_family/FANSON-76.jpg");
+
+      }
+      #back-to-top {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: block;
+        z-index: 1000000;
+        background-color: blue;
+        padding: 1rem;
+        color: white;
       }
     </style>
 
@@ -116,7 +166,7 @@
     </script>
   </head>
   <body>
-    <script src="glide.js"></script>
+    <!-- <script src="glide.js"></script> -->
     <script type="module">
       import PhotoSwipeLightbox from "./photoswipe-lightbox.esm.js";
       const lightbox = new PhotoSwipeLightbox({
@@ -128,6 +178,7 @@
     </script>
 
     <div id="main-container">
+      <a id="back-to-top" href="#landing">Back</a>
       <section id="landing">
         <div id="landing-content">
           <h1>感謝大家</h1>
@@ -139,11 +190,27 @@
             最誠摯的謝意， [您的名字]
           </p>
         </div>
+        <div class="thumbs-nav">
+          <a id="white-1-nav" class="thumb-nav-item" href="#white-1"
+            >Gallery 1</a
+          >
+          <a id="white-2-nav" class="thumb-nav-item" href="#white-2"
+            >Gallery 2</a
+          >
+          <a id="white-3-nav" class="thumb-nav-item" href="#white-3"
+            >Gallery 3</a
+          >
+          <a id="red-1-nav" class="thumb-nav-item" href="#red-1">Gallery 4</a>
+          <a id="red-2-nav" class="thumb-nav-item" href="#red-2">Gallery 5</a>
+          <a id="day-family-nav" class="thumb-nav-item" href="#day-family"
+            >Gallery 5</a
+          >
+        </div>
       </section>
     </div>
-    <section id="image-gallery">
+    <div id="image-gallery">
       <div id="my-gallery">
-        <div class="white-1 section-bg">
+        <div id="white-1" class="white-1 section-bg">
           <!-- 
           
           white 1 
@@ -219,7 +286,8 @@
         white 2 
         
         -->
-        <div class="section-bg white-2">
+
+        <div id="white-2" class="section-bg white-2">
           <div class="thumbs">
             <a
               href="images/4Q4A2447.jpg"
@@ -271,7 +339,7 @@
         white 3 
         
         -->
-        <div class="section-bg white-3">
+        <div id="white-3" class="section-bg white-3">
           <div class="thumbs">
             <a
               href="images/4Q4A2519.jpg"
@@ -315,7 +383,7 @@
         red 1 
         
         -->
-        <div class="section-bg red-1">
+        <div id="red-1" class="section-bg red-1">
           <div class="thumbs">
             <a
               href="images/4Q4A2797.jpg"
@@ -374,7 +442,8 @@
         red 2
         
         -->
-        <div class="section-bg red-2">
+
+        <div id="red-2" class="section-bg red-2">
           <div class="thumbs">
             <a
               href="images/4Q4A2891.jpg"
@@ -427,74 +496,305 @@
             </a>
           </div>
         </div>
+        <!-- 
+        
+        
+        Special thanks panel 
+         
+        
+        -->
+        <div class="section-bg">
+          <ul>
+            <li class="glide__slide">邱嘉傻</li>
+            <li class="glide__slide">陈柏落</li>
+            <li class="glide__slide">莆鴻轩</li>
+            <li class="glide__slide">Sophia, Eric, and Philip</li>
+            <li class="glide__slide">美四磐石</li>
+            <li class="glide__slide">羊人教会</li>
+            <li class="glide__slide">鳳山基薄吞老教会</li>
+            <li class="glide__slide">印嘉後</li>
+            <li class="glide__slide">大姑，二姑，三女古品璋</li>
+            <li class="glide__slide">穎睿，慧受麗娜腸男</li>
+            <li class="glide__slide">陈柏客</li>
+            <li class="glide__slide">李南山</li>
+            <li class="glide__slide">会明，信雄佳，哲良，鸿文武</li>
+            <li class="glide__slide">振哲，天鸿，孟才，明泉</li>
+            <li class="glide__slide">Victor, Lily</li>
+          </ul>
+        </div>
+        <!--
+        
+        Day family photos
+ 
+        -->
+        <div id="day-family" class="section-bg day-family">
+          <div class="thumbs day-family-thumbs">
+            <a
+              href="images/day_family/FANSON-72.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-72.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-73.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-73.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-74.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-74.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-75.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-75.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-76.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-76.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-77.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-77.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-78.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-78.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-79.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-79.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-80.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-80.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-81.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-81.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-82.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-82.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-83.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-83.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-84.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-84.jpg" alt="Image 1" /> </a
+            ><a
+              href="images/day_family/FANSON-85.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-85.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-86.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-86.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-87.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-87.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-88.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-88.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-89.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-89.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-90.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-90.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-91.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-91.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-92.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-92.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-93.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-93.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-94.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-94.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-95.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-95.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-96.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-96.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-97.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-97.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-98.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-98.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-99.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-99.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-100.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-100.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-101.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-101.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-102.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-102.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-103.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-103.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-104.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-104.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-105.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-105.jpg" alt="Image 1" />
+            </a>
+            <a
+              href="images/day_family/FANSON-106.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-106.jpg" alt="Image 1" />
+            </a>
+          </div>
+        </div>
+        <!--
+        
+        Ceremony
+ 
+        -->
+        <div id="ceremony" class="section-bg ceremony">
+          <div class="thumbs">
+            <!-- <a
+              href="images/day_family/FANSON-72.jpg"
+              data-pswp-width="1280"
+              data-pswp-height="854"
+            >
+              <img src="images/day_family/FANSON-72.jpg" alt="Image 1" />
+            </a> -->
+          </div>
+        </div>
 
         <!-- More images... -->
       </div>
-    </section>
-
-    <!-- <section id="slideshows">
-      <div id="slideshow1" class="glide1">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide"><img src="images/4Q4A2447.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2452.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2455.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2457.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2459.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2519.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2560.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2570.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2574.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2592.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2752.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2760.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2797.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2798.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2801.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2836.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2838.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2848.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2850.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2891.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2898.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2968.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2975.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2978.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2985.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A3026.jpg" /></li>
-          </ul>
-        </div>
-      </div>
-      <div id="slideshow2" class="glide2">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide"><img src="images/4Q4A2328.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2332.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2395.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2356.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2719.jpg" /></li>
-            <li class="glide__slide"><img src="images/4Q4A2317.jpg" /></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <ul>
-      <li class="glide__slide">邱嘉傻</li>
-      <li class="glide__slide">陈柏落</li>
-      <li class="glide__slide">莆鴻轩</li>
-      <li class="glide__slide">Sophia, Eric, and Philip</li>
-      <li class="glide__slide">美四磐石</li>
-      <li class="glide__slide">羊人教会</li>
-      <li class="glide__slide">鳳山基薄吞老教会</li>
-      <li class="glide__slide">印嘉後</li>
-      <li class="glide__slide">大姑，二姑，三女古品璋</li>
-      <li class="glide__slide">穎睿，慧受麗娜腸男</li>
-      <li class="glide__slide">陈柏客</li>
-      <li class="glide__slide">李南山</li>
-      <li class="glide__slide">会明，信雄佳，哲良，鸿文武</li>
-      <li class="glide__slide">振哲，天鸿，孟才，明泉</li>
-      <li class="glide__slide">Victor, Lily</li>
-    </ul> -->
+    </div>
   </body>
   <script>
     new Glide(".glide1", {
