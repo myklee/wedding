@@ -14,9 +14,13 @@
     <style>
       :root {
         --rounded: 10px;
-        --primary-color: #6A0000; 
+        --rounded-small: 5px;
+        --primary-color: #6a0000;
         --font-size: 16px;
         --spacing: 10px;
+      }
+      html {
+        background-color: #FAE9E9;
       }
       #main-container {
         height: 100vh;
@@ -129,6 +133,7 @@
           min-width: 150px;
           min-height: 150px;
           justify-items: center;
+          border-radius: var(--rounded-small);
           &.h {
             width: 225px;
           }
@@ -138,6 +143,7 @@
           justify-content: center;
           flex-wrap: wrap;
           top: 0;
+          max-height: 300px;
           a {
             width: 150px;
             height: 100px !important;
